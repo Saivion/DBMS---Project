@@ -1,4 +1,3 @@
-/*
 CREATE TABLE `placed_order`
 (
 `Id` int,
@@ -15,8 +14,7 @@ CREATE TABLE `placed_order`
 `comment` text,
 `ts` timestamp
 );
-*/
-/*
+
 CREATE TABLE `comment`
 (
 `Id` int,
@@ -27,8 +25,7 @@ CREATE TABLE `comment`
 `Is_complaint` bool,
 `Is_praise` bool
 );
-*/
-/*
+
 CREATE TABLE `customer:orders`
 (
 `Id` int,
@@ -41,8 +38,7 @@ CREATE TABLE `customer:orders`
 `password` varchar(30),
 `time_joined` timestamp
 );
-*/
-/*
+
 CREATE TABLE `in_order`
 (
 `Id` int,
@@ -54,8 +50,7 @@ CREATE TABLE `in_order`
 `price` decimal(12,2),
 `comment` varchar(50)
 );
-*/
-/*
+
 CREATE TABLE `order_status`
 (
 `Id` int,
@@ -63,12 +58,9 @@ CREATE TABLE `order_status`
 `status_catalog_id` int,
 `ts` timestamp
 );
-*/
-/*
+
 CREATE TABLE `status_catalog`
 (
 `Id` int,
 `status_name` varchar(20)
 );
-*/
-
