@@ -6,7 +6,7 @@ CREATE TABLE `placed_order`
 `Customer id` int NOT NULL,
 `price` decimal(12,2) NOT NULL CHECK (price >= 0),
 `discount` decimal(12,2) NOT NULL CHECK (discount >= 0),
-`final price` decimal(12,2) NOT NULL CHECK (`final price` >= 0),
+`final price` decimal(12,2) NOT NULL CHECK (`final_price` >= 0),
 `comment` text NULL,
 PRIMARY KEY (id),
 FOREIGN KEY (`Customer id`) REFERENCES `customer:orders`(id)
