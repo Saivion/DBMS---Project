@@ -1,6 +1,6 @@
 # DBMSProject
 
-<h2 style="color: orange"> Things to finish: </h2>
+<h2> Things to finish: </h2>
 <ul> 
  <li>connect db to web ui interface</li>
  <li>10 business queries</li>
