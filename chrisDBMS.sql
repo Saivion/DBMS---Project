@@ -9,7 +9,7 @@ CREATE TABLE `placed_order`
 `final price` decimal(12,2) NOT NULL CHECK (`final_price` >= 0),
 `comment` text NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (`Customer id`) REFERENCES `customer:orders`(id)
+FOREIGN KEY (`Customer id`) REFERENCES `Customer`(id)
 );
 CREATE TABLE `comment`
 (
@@ -20,10 +20,10 @@ CREATE TABLE `comment`
 `Is_complaint` bool NULL,
 `Is_praise` bool NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (`Customer id`) REFERENCES `customer:orders`(id),
+FOREIGN KEY (`Customer id`) REFERENCES `Customer`(id),
 FOREIGN KEY (`Placed_order_id`) REFERENCES Placed_order(id)
 );
-CREATE TABLE `customer:orders`
+CREATE TABLE `Customer`
 (
 `id` int NOT NULL,
 `customer_name` varchar(30) NOT NULL,
@@ -31,10 +31,9 @@ CREATE TABLE `customer:orders`
 `address` varchar(50) NOT NULL,
 `contact_phone` varchar(25) NOT NULL,
 `email` varchar(35) NOT NULL,
-`confirmation_code` varchar(30) NOT NULL,
 `password` varchar(30) NOT NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (city_id) REFERENCES city(id)
+FOREIGN KEY (city_id) REFERENCES City(cityID)
 );
 CREATE TABLE `in_order`
 (
