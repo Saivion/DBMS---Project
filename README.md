@@ -1,4 +1,6 @@
-# DBMSProject
+# Database Project
+
+To summarize our expectations, we hope to improve the overall well-being of the community by giving them easy access to their favorite foods with a single click.
 
 <h2> Things to finish: </h2>
 <ul> 
