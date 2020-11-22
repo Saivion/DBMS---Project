@@ -13,29 +13,29 @@ FOREIGN KEY (menu_item_id) REFERENCES menu_item(id));
 
 create table in_offer
 (
-`id` int NOT NULL,
-`menu_item_id` int,
+id int NOT NULL,
+menu_item_id int,
 PRIMARY KEY (id),
 FOREIGN KEY (menu_item_id) references menu_item(id)
 );
 
 create table category
 (
-`id` int NOT NULL,
-`category_name` varchar(50),
+id int NOT NULL,
+category_name varchar(50),
 PRIMARY KEY (id)
 );
 
 create table menu_item
 (
-`id` int NOT NULL, 
-`item_name` varchar(50) NOT NULL,
-`category_id` int NOT NULL,
-`description` text,
-`ingredients` text, 
-`recipe` text,
-`price` decimal(12,2) NOT NULL,
-`active` bool NOT NULL, 
+id int NOT NULL, 
+item_name varchar(50) NOT NULL,
+category_id int NOT NULL,
+description text,
+ingredients text, 
+recipe text,
+price decimal(12,2) NOT NULL,
+active bool NOT NULL, 
 PRIMARY KEY (id),
 FOREIGN KEY (category_id) references category(id)
 );
@@ -101,3 +101,4 @@ status_catalog_id int NOT NULL,
 PRIMARY KEY (id),
 FOREIGN KEY (placed_order_id) REFERENCES placed_order(id),
 FOREIGN KEY (status_catalog_id) REFERENCES status_catalog(id));
+
