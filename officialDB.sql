@@ -8,14 +8,14 @@ CREATE TABLE restaurant(
 restaurant_id int NOT NULL, 
 restaurant_name varchar(25) NOT NULL, 
 address  varchar(50) NOT NULL , 
-zip_code int, 
+zip_code int NOT NULL, 
 PRIMARY KEY(restaurant_id),
 FOREIGN KEY (zip_code) references city(zip_code)); 
 
 CREATE TABLE customer(
-customer_id int NOT NULL,
+customer_id int NOT NULL AUTO_INCREMENT,
 customer_name varchar(255) NOT NULL,
-zip_code int,
+zip_code int NOT NULL,
 address varchar(50) NOT NULL,
 contact_phone varchar(25) NOT NULL,
 email varchar(30) NOT NULL,
