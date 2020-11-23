@@ -36,7 +36,6 @@ category_id int NOT NULL,
 description text,
 ingredients text NOT NULL,  
 price decimal(3,2) NOT NULL,
-active bool NOT NULL, -- whats this for?
 PRIMARY KEY (item_id),
 FOREIGN KEY (category_id) references category(category_id));
 
@@ -53,7 +52,6 @@ PRIMARY KEY (order_id),
 FOREIGN KEY (customer_id) REFERENCES customer(customer_id));
 
 CREATE TABLE in_order(
-id int NOT NULL, -- do we need an id for this?
 placed_order_id int NOT NULL,
 offer_id int NOT NULL,
 menu_item_id int NOT NULL,
@@ -80,8 +78,6 @@ comment_id int NOT NULL,
 placed_order_id int NOT NULL,
 customer_id int NOT NULL,
 comment_text text NOT NULL,
-Is_complaint bool NULL, -- do we need this?
-Is_praise bool NULL, -- do we need this?
 PRIMARY KEY (comment_id),
 FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
 FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id));
