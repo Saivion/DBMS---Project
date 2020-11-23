@@ -1,5 +1,59 @@
+CREATE TABLE city( 
+city_id int NOT NULL, 
+city  varchar(255) NOT NULL CHECK (city not like '%[^0-9]%'), 
+state  varchar(255) NOT NULL CHECK (state not like '%[^0-9]%'),
+zip_code varchar(255) NOT NULL, 
+PRIMARY KEY(city_id));
+
+CREATE TABLE restaurant( 
+restaurant_id int NOT NULL, 
+restaurant_name varchar(255) NOT NULL, 
+address  varchar(255) NOT NULL , 
+city_id int NOT NULL, 
+PRIMARY KEY(restaurant_id),
+FOREIGN KEY (city_id) references city(city_id));
+
+CREATE TABLE customer(
+customer_id int NOT NULL,
+customer_name varchar(255) NOT NULL,
+city_id int NOT NULL,
+address varchar(255) NOT NULL,
+contact_phone varchar(25) NOT NULL,
+email varchar(255) NOT NULL,
+password varchar(255) NOT NULL,
+PRIMARY KEY (customer_id),
+FOREIGN KEY (city_id) REFERENCES city(city_id));
+
+create table category(
+category_id int NOT NULL,
+category_name varchar(50),
+PRIMARY KEY (category_id));
+
+create table menu_item(
+item_id int NOT NULL, 
+item_name varchar(50) NOT NULL,
+category_id int NOT NULL,
+description text,
+ingredients text NOT NULL,  
+price decimal(12,2) NOT NULL,
+active bool NOT NULL, -- whats this for?
+PRIMARY KEY (item_id),
+FOREIGN KEY (category_id) references category(category_id));
+
+CREATE TABLE placed_order(
+order_id int NOT NULL,
+restarant_id int NOT NULL,
+delivery_address varchar(50) NOT NULL,
+customer_id int NOT NULL,
+price decimal(12,2) NOT NULL CHECK (price >= 0),
+discount decimal(12,2) NOT NULL CHECK (discount >= 0),
+final_price decimal(12,2) NOT NULL CHECK (final_price >= 0),
+comment text NULL,
+PRIMARY KEY (order_id),
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id));
+
 CREATE TABLE in_order(
-id int NOT NULL,
+id int NOT NULL, -- do we need an id for this?
 placed_order_id int NOT NULL,
 offer_id int NOT NULL,
 menu_item_id int NOT NULL,
@@ -8,86 +62,29 @@ item_price decimal(12,2) NOT NULL CHECK (item_price >= 0),
 price decimal(12,2) NOT NULL CHECK (price >= 0),
 comment varchar(50) NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (placed_order_id) REFERENCES placed_order(id),
-FOREIGN KEY (menu_item_id) REFERENCES menu_item(id));
+FOREIGN KEY (offer_id) REFERENCES in_offer(offer_id),
+FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id),
+FOREIGN KEY (menu_item_id) REFERENCES menu_item(item_id));
 
-create table in_offer
-(
-id int NOT NULL,
+
+create table in_offer(
+offer_id int NOT NULL,
 menu_item_id int,
-PRIMARY KEY (id),
-FOREIGN KEY (menu_item_id) references menu_item(id)
-);
+PRIMARY KEY (offer_id),
+FOREIGN KEY (menu_item_id) references menu_item(menu_item_id));											
 
-create table category
-(
-id int NOT NULL,
-category_name varchar(50),
-PRIMARY KEY (id)
-);
-
-create table menu_item
-(
-id int NOT NULL, 
-item_name varchar(50) NOT NULL,
-category_id int NOT NULL,
-description text,
-ingredients text, 
-recipe text,
-price decimal(12,2) NOT NULL,
-active bool NOT NULL, 
-PRIMARY KEY (id),
-FOREIGN KEY (category_id) references category(id)
-);
-
-CREATE TABLE city ( 
-cityID int NOT NULL, 
-city  varchar(255) NOT NULL CHECK (city not like '%[^0-9]%'), 
-state  varchar(255) NOT NULL CHECK (state not like '%[^0-9]%'),
-zipCode varchar(255) NOT NULL, 
-PRIMARY KEY(cityID));
-                                                
-CREATE TABLE restaurant ( 
-restaurantID int NOT NULL, 
-restaurantName varchar(255) NOT NULL, 
-address  varchar(255) NOT NULL , 
-cityID int NOT NULL, 
-PRIMARY KEY(restaurantID),
-FOREIGN KEY (cityID) references city(cityID));
-
-CREATE TABLE customer(
-id int NOT NULL,
-customer_name varchar(30) NOT NULL,
-city_id int NOT NULL,
-address varchar(50) NOT NULL,
-contact_phone varchar(25) NOT NULL,
-email varchar(35) NOT NULL,
-password varchar(30) NOT NULL,
-PRIMARY KEY (id),
-FOREIGN KEY (city_id) REFERENCES city(cityID));
-
-CREATE TABLE placed_order(
-id int NOT NULL,
-restarant_id int NOT NULL,
-Delivery_address varchar(50) NOT NULL,
-customer_id int NOT NULL,
-price decimal(12,2) NOT NULL CHECK (price >= 0),
-discount decimal(12,2) NOT NULL CHECK (discount >= 0),
-final_price decimal(12,2) NOT NULL CHECK (final_price >= 0),
-comment text NULL,
-PRIMARY KEY (id),
-FOREIGN KEY (Customer_id) REFERENCES customer(id));
+-- what's this table for^
 
 CREATE TABLE comment(
-id int NOT NULL,
-Placed_order_id int NOT NULL,
-Customer_id int NOT NULL,
-Comment_text text NOT NULL,
-Is_complaint bool NULL,
-Is_praise bool NULL,
-PRIMARY KEY (id),
-FOREIGN KEY (Customer_id) REFERENCES customer(id),
-FOREIGN KEY (Placed_order_id) REFERENCES Placed_order(id));
+comment_id int NOT NULL,
+placed_order_id int NOT NULL,
+customer_id int NOT NULL,
+comment_text text NOT NULL,
+Is_complaint bool NULL, -- do we need this?
+Is_praise bool NULL, -- do we need this?
+PRIMARY KEY (comment_id),
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id));
 
 CREATE TABLE status_catalog(
 id int NOT NULL,
@@ -101,4 +98,3 @@ status_catalog_id int NOT NULL,
 PRIMARY KEY (id),
 FOREIGN KEY (placed_order_id) REFERENCES placed_order(id),
 FOREIGN KEY (status_catalog_id) REFERENCES status_catalog(id));
-
