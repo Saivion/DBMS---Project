@@ -48,6 +48,7 @@ price decimal(3,2) NOT NULL CHECK (price >= 0),
 discount decimal(3,2) NOT NULL CHECK (discount >= 0),
 final_price decimal(3,2) NOT NULL CHECK (final_price >= 0),
 comment text NULL,
+date_ordered date,
 PRIMARY KEY (order_id),
 FOREIGN KEY (customer_id) REFERENCES customer(customer_id));
 
