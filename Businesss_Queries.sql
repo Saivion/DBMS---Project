@@ -1,1 +1,2 @@
 -- How many 5 star rating foods at () restaurant.
+-- How many restaurants are subscribed to our delivery program.
