@@ -4,7 +4,7 @@ To summarize our expectations, we hope to improve the overall well-being of the 
 
 <h2> Things to finish: </h2>
 <ul> 
- <li>connect db to web ui interface</li>
+ <li>connect db to web ui interface :white_check_mark:</li>
  <li>add business data</li>
  <li>visual view of how tables connect :white_check_mark:</li>
  <li>8 business queries</li>

@@ -1,3 +1,4 @@
 How TF to Install The Database
-Step 1: 
-
+Step 1: Create the DB by inserting the line CREATE DATABASE OnDemand.
+Step 2: Insert tables and table data by opening and executing the OfficialDB.sql file.
+step 3: For exporting and importing purposes
