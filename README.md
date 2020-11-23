@@ -6,8 +6,9 @@ To summarize our expectations, we hope to improve the overall well-being of the 
 <ul> 
  <li>connect db to web ui interface</li>
  <li>add business data</li>
+ <li>visual view of how tables connect :white_check_mark:</li>
  <li>8 business queries</li>
- <li>possibly more constraints</li>
+ <li>possibly more constraints :white_check_mark:</li>
  <li>step by step instructions</li>
  <li>database information :white_check_mark:</li>
 </ul>
