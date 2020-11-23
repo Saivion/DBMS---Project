@@ -71,7 +71,7 @@ create table in_offer(
 offer_id int NOT NULL,
 menu_item_id int,
 PRIMARY KEY (offer_id),
-FOREIGN KEY (menu_item_id) references menu_item(menu_item_id));											
+FOREIGN KEY (menu_item_id) references menu_item(item_id));											
 
 -- what's this table for^
 
@@ -96,5 +96,5 @@ id int NOT NULL,
 placed_order_id int NOT NULL,
 status_catalog_id int NOT NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (placed_order_id) REFERENCES placed_order(id),
+FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id),
 FOREIGN KEY (status_catalog_id) REFERENCES status_catalog(id));
