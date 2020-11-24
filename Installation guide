@@ -1,4 +1,4 @@
-How TF to Install The Database
-Step 1: Create the DB by inserting the line CREATE DATABASE OnDemand.
-Step 2: Insert tables and table data by opening and executing the OfficialDB.sql file.
+Installing The Database
+Step 1: Proceed to the link "https://dev.mysql.com/downloads/mysql/" and select the proper operating system you wish to download mysql onto. once completed cli
+Step 2: After completing step 1 click "Go to Download Page" underneath "Reccomended Download". 
 step 3: For exporting and importing purposes
