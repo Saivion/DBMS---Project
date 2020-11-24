@@ -4,3 +4,12 @@
 
 -- How many restaurants are subscribed to our delivery program.
 	SELECT SUM(restaurant_id) AS our_fleet FROM restaurant;
+	
+-- Menu items in () restaurant.
+-- Who was our very first user.
+-- Who was our very first restaurant.
+-- Lifetime orders by ()
+-- Least purchased from restaurant.
+-- Restaurant with most delivers.
+-- Most valuable user(spent the most).
+-- When was the very frist order placed on our platform.
