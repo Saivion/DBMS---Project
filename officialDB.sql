@@ -10,19 +10,20 @@ restaurant_name varchar(50) NOT NULL,
 street_address  varchar(50) NOT NULL, 
 zip_code int NOT NULL, 
 city_id int,
+date_joined date NOT NULL,
 PRIMARY KEY(restaurant_id),
 FOREIGN KEY (city_id) references city(city_id)); 
 
-CREATE TABLE customer(
-customer_id int NOT NULL AUTO_INCREMENT,
-customer_name varchar(255) NOT NULL,
-street_address varchar(50) NOT NULL,
+CREATE TABLE user(
+user_id int NOT NULL AUTO_INCREMENT,
+name varchar(255) NOT NULL,
+street_address varchar(255) NOT NULL,
 zip_code int NOT NULL,
 city_id int,
 email varchar(30) NOT NULL,
 phone varchar(25) NOT NULL,
 date_joined date NOT NULL,
-PRIMARY KEY (customer_id),
+PRIMARY KEY (user_id),
 FOREIGN KEY (city_id) REFERENCES city(city_id));
 
 create table food_category(
@@ -53,7 +54,7 @@ final_price decimal(5,2) NOT NULL CHECK (final_price >= 0),
 date_ordered date,
 comment text  NULL,
 PRIMARY KEY (order_id),
-FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+FOREIGN KEY (customer_id) REFERENCES customer(user_id),
 FOREIGN KEY (restaurant_id) REFERENCES restaurant(restaurant_id));
 
 CREATE TABLE in_order(
@@ -73,7 +74,7 @@ order_status varchar(20) NOT NULL CHECK (order_status IN('Preparing food', 'Food
 PRIMARY KEY (status_id),
 FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id));
 
-CREATE VIEW American AS
-SELECT f.item_id, f.item_name, c.category_name
-FROM menu_item AS f INNER JOIN catagory AS c
-WHERE category_name ='American';
+CREATE VIEW menu_view AS
+SELECT r.restaurant_name, m.item_name, f.category_name
+FROM restaurant r, menu_item m, food_category f
+WHERE r.restaurant_name ='Chick-fil-A' AND m.restaurant_id = r.restaurant_id;
