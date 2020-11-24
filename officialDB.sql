@@ -31,6 +31,7 @@ category_name varchar(50) NOT NULL,
 PRIMARY KEY (category_id));
 
 create table menu_item(
+restaurant_id int,
 item_id int NOT NULL AUTO_INCREMENT, 
 item_name varchar(50) NOT NULL,
 description text NULL,
@@ -38,6 +39,7 @@ price decimal(3,2) NOT NULL,
 rating int NULL,
 category_id int,
 PRIMARY KEY (item_id),
+FOREIGN KEY (restaurant_id) references restaurant(restaurant_id),
 FOREIGN KEY (category_id) references food_category(category_id));
 
 CREATE TABLE placed_order(

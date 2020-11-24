@@ -18,10 +18,10 @@ VALUES ('American');
 INSERT INTO food_category (category_name)
 VALUES ('Healthy');
 
-INSERT INTO menu_item (item_name, price, rating, category_id)
-VALUES ('Cobb Salad', 7.99, 4, 2);
-INSERT INTO menu_item (item_name, price, rating, category_id)
-VALUES ('Mac & Cheese', 3.99, 3, 1);
+INSERT INTO menu_item (restaurant_id, item_name, price, rating, category_id)
+VALUES (1, 'Cobb Salad', 7.99, 4, 2);
+INSERT INTO menu_item (restaurant_id, item_name, price, rating, category_id)
+VALUES (1, 'Mac & Cheese', 3.99, 3, 1);
 
 INSERT INTO placed_order (restaurant_id, customer_id, delivery_address, price, final_price, date_ordered)
 VALUES (1, 2, '25330 Kingsland Blvd',11.98 , 11.98, '2020-02-11');
