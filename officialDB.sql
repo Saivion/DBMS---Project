@@ -69,3 +69,8 @@ placed_order_id int NOT NULL,
 status_name varchar(20) NOT NULL CHECK (status_name IN('Preparing food', 'Food is ready', 'Food is on the way')),
 PRIMARY KEY (status_id),
 FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id));
+
+CREATE VIEW American AS
+SELECT f.item_id, f.item_name, c.category_name
+FROM menu_item AS f INNER JOIN catagory AS c
+WHERE category_name ="American";
