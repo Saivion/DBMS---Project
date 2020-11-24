@@ -54,7 +54,7 @@ final_price decimal(5,2) NOT NULL CHECK (final_price >= 0),
 date_ordered date,
 comment text  NULL,
 PRIMARY KEY (order_id),
-FOREIGN KEY (customer_id) REFERENCES customer(user_id),
+FOREIGN KEY (customer_id) REFERENCES user(user_id),
 FOREIGN KEY (restaurant_id) REFERENCES restaurant(restaurant_id));
 
 CREATE TABLE in_order(
