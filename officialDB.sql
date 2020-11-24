@@ -5,33 +5,20 @@ state  varchar(15) NOT NULL CHECK (state not like '%[^0-9]%'),
 PRIMARY KEY(city_id));
 
 CREATE TABLE restaurant( 
-<<<<<<< HEAD
 restaurant_id int NOT NULL AUTO_INCREMENT, 
 restaurant_name varchar(50) NOT NULL, 
 street_address  varchar(50) NOT NULL, 
 zip_code int NOT NULL, 
 city_id int,
-=======
-restaurant_id int NOT NULL, 
-restaurant_name varchar(25) NOT NULL, 
-address  varchar(50) NOT NULL , 
-zip_code int NOT NULL, 
->>>>>>> bdcf6253135130ec79bbd9fd8fa3b42751ce1e67
 PRIMARY KEY(restaurant_id),
 FOREIGN KEY (city_id) references city(city_id)); 
 
 CREATE TABLE customer(
 customer_id int NOT NULL AUTO_INCREMENT,
 customer_name varchar(255) NOT NULL,
-<<<<<<< HEAD
 street_address varchar(50) NOT NULL,
 zip_code int NOT NULL,
 city_id int,
-=======
-zip_code int NOT NULL,
-address varchar(50) NOT NULL,
-contact_phone varchar(25) NOT NULL,
->>>>>>> bdcf6253135130ec79bbd9fd8fa3b42751ce1e67
 email varchar(30) NOT NULL,
 phone varchar(25) NOT NULL,
 date_joined date NOT NULL,
@@ -82,13 +69,9 @@ status_id int NOT NULL AUTO_INCREMENT,
 placed_order_id int,
 order_status varchar(20) NOT NULL CHECK (order_status IN('Preparing food', 'Food is ready', 'Food is on the way', 'Delivered')),
 PRIMARY KEY (status_id),
-<<<<<<< HEAD
-FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id));
-=======
 FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id));
 
 CREATE VIEW American AS
 SELECT f.item_id, f.item_name, c.category_name
 FROM menu_item AS f INNER JOIN catagory AS c
-WHERE category_name ="American";
->>>>>>> bdcf6253135130ec79bbd9fd8fa3b42751ce1e67
+WHERE category_name ='American';
