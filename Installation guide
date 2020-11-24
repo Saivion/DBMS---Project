@@ -7,4 +7,12 @@ you may skip this by scrolling down to and clicking on the text "No thanks,just 
 step 5: When the initial installation has finish click the installer you have just downloaded to have it initiate the setup process,
 a few popus may be presented to you agree to the ones pertaining to the mysql installer.
 Step 6: Once you reach the license Agreement it is recomended to read the terms and if you agree click the acceptance check box proceded by the next arrow.
-Step 7 : On the next page you will be presented with a list of setup types, it is reccomended to use "Developer Default"
+Step 7 : On the next page you will be presented with a list of setup types, it is reccomended to use "Developer Default".
+step 8 : When on the "Check Requirements" page you may get an confirmation asking to continueclick yes
+we do not use the programs that this will cause you to exclude, click execute.
+step 9 :Continue on by clicking next untill "Type and Networking" are reached make sure "Standalone Mysql Server" is selected.
+Step 10 : The next "Type and Networking" will let you change server configuration type
+Set "Config Type" to development machine, and "TCP/IP" Port Number to 3306.
+Step 11 : Next in "Accounts and Roles" assign a root password then click "Add User" add a username of your choosing, leave the rest as default and choose a password to assign to that user. 
+Step 12 : Continue through the rest of the pages leaving all as default settings, then when you approach the "Apply Configuration" page click execute.
+Step 13 : Again continue through the pages untill you reach "Connect to Server" click "check" on this page to assure the credentials are correct and working.     
