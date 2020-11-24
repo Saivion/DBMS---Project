@@ -77,4 +77,4 @@ FOREIGN KEY (placed_order_id) REFERENCES placed_order(order_id));
 CREATE VIEW menu_view AS
 SELECT r.restaurant_name, m.item_name, f.category_name
 FROM restaurant r, menu_item m, food_category f
-WHERE r.restaurant_name ='Chick-fil-A' AND m.restaurant_id = r.restaurant_id;
+WHERE r.restaurant_name ='Chick-fil-A' AND m.restaurant_id = r.restaurant_id AND m.category_id = f.category_id;
