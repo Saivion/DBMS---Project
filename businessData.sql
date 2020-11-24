@@ -7,10 +7,10 @@ VALUES ('Houston', 'TX');
 INSERT INTO city (city, state)
 VALUES ('Katy', 'TX');
 
-INSERT INTO restaurant (restaurant_name, street_address, zip_code, city_id)
-VALUES ('Chick-fil-A', '5644 W Grand Pkwy S', 77406, 2);
+INSERT INTO restaurant (restaurant_name, street_address, zip_code, city_id, date_joined)
+VALUES ('Chick-fil-A', '5644 W Grand Pkwy S', 77406, 2, '2019-12-15');
 
-INSERT INTO customer (customer_name, street_address, zip_code, city_id, email, phone, date_joined)
+INSERT INTO user (name, street_address, zip_code, city_id, email, phone, date_joined)
 VALUES ('John AppleSeed', '6207 Katy-Gaston Rd', 77494, 3, 'jseed@email.com', '111-111-1111', '2020-01-14');
 
 INSERT INTO food_category (category_name)
