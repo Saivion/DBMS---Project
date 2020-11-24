@@ -1,4 +1,10 @@
 Installing The Database
-Step 1: Proceed to the link "https://dev.mysql.com/downloads/mysql/" and select the proper operating system you wish to download mysql onto. once completed cli
+Step 1: Proceed to the link "https://dev.mysql.com/downloads/mysql/" and select the proper operating system you wish to download mysql onto.
 Step 2: After completing step 1 click "Go to Download Page" underneath "Reccomended Download". 
-step 3: For exporting and importing purposes
+step 3: Once on the next page scroll down and click on the download with the larger file.
+step 4: On the page after step 3 you will be asked to sign into your oracle account
+you may skip this by scrolling down to and clicking on the text "No thanks,just start my download", a popup may appear asking you to save the file agree and save the file.
+step 5: When the initial installation has finish click the installer you have just downloaded to have it initiate the setup process,
+a few popus may be presented to you agree to the ones pertaining to the mysql installer.
+Step 6: Once you reach the license Agreement it is recomended to read the terms and if you agree click the acceptance check box proceded by the next arrow.
+Step 7 : On the next page you will be presented with a list of setup types, it is reccomended to use "Developer Default"
