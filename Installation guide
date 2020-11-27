@@ -22,4 +22,5 @@ Step 16 : Now to install the "On Demand" database loging to your mysql local ins
 Step 17 : Right click in a blank area in the schemas tab click "create schema".
 Step 18 : Name the schema "On Demand" then click apply.
 Step 19 : Next insert the data from the officialDB.sql into the sql tab for executing queries and run to create the required tables.
-Step 20 : 
+Step 20 : Insert the data from "buisnessData.sql" into the sql tab and execute it.
+Step 21 : The last step to installing the "OnDemand DB" is to run the query data from "buisnessQueries.sql" and congratulations you have set up your database. 
