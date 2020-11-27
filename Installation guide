@@ -16,3 +16,7 @@ Set "Config Type" to development machine, and "TCP/IP" Port Number to 3306.
 Step 11 : Next in "Accounts and Roles" assign a root password then click "Add User" add a username of your choosing, leave the rest as default and choose a password to assign to that user. 
 Step 12 : Continue through the rest of the pages leaving all as default settings, then when you approach the "Apply Configuration" page click execute.
 Step 13 : Again continue through the pages untill you reach "Connect to Server" click "check" on this page to assure the credentials are correct and working.     
+Step 14 : On the "Apply Configuration" page click execute, once finished click next.
+step 15 : to finish the installation of mysql on the "installation complete page click finish.
+Step 16 : Now to install the "On Demand" database loging to your mysql local instance 
+Step 17 : 
