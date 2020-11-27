@@ -18,5 +18,8 @@ Step 12 : Continue through the rest of the pages leaving all as default settings
 Step 13 : Again continue through the pages untill you reach "Connect to Server" click "check" on this page to assure the credentials are correct and working.     
 Step 14 : On the "Apply Configuration" page click execute, once finished click next.
 step 15 : to finish the installation of mysql on the "installation complete page click finish.
-Step 16 : Now to install the "On Demand" database loging to your mysql local instance 
-Step 17 : 
+Step 16 : Now to install the "On Demand" database loging to your mysql local instance. 
+Step 17 : Right click in a blank area in the schemas tab click "create schema".
+Step 18 : Name the schema "On Demand" then click apply.
+Step 19 : Next insert the data from the officialDB.sql into the sql tab for executing queries and run to create the required tables.
+Step 20 : 
