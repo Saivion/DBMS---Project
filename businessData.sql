@@ -4,8 +4,6 @@ INSERT INTO city (city, state)
 VALUES ('Richmond', 'TX');
 INSERT INTO city (city, state)
 VALUES ('Katy', 'TX');
-INSERT INTO city (city, state)
-VALUES ('Prairie View', 'TX');
 
 
 INSERT INTO restaurant (restaurant_name, street_address, zip_code, city_id, date_joined)
