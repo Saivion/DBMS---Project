@@ -9,6 +9,6 @@ To summarize our expectations, we hope to improve the overall well-being of the 
  <li>visual view of how tables connect :white_check_mark:</li>
  <li>8 business queries :white_check_mark:</li>
  <li>possibly more constraints :white_check_mark:</li>
- <li>step by step instructions</li>
+ <li>step by step instructions :white_check_mark:</li>
  <li>database information :white_check_mark:</li>
 </ul>
