@@ -12,3 +12,5 @@ To summarize our expectations, we hope to improve the overall well-being of the 
  <li>step by step instructions :white_check_mark:</li>
  <li>database information :white_check_mark:</li>
 </ul>
+
+<p>Project Complete.</p>
