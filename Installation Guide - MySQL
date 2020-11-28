@@ -1,0 +1,26 @@
+In order to properly install the onDemand MySQL Database the steps below are needed:
+ 
+Step 1: Proceed to the link "https://dev.mysql.com/downloads/MySQL/" and select the proper operating system you wish to download MySQL onto.
+Step 2: After completing Step 1, click "Go to Download Page" underneath "Recommended Download".
+Step 3: Once on the next page scroll down and click on the download with the larger file.
+Step 4: On the page after Step 3 you will be asked to sign into your oracle account
+you may skip this by scrolling down to and clicking on the text "No thanks, just start my download", a popup may appear asking you to save the file, agree and save the file. 
+Step 5: When the initial installation has finished click the installer you have just downloaded to have it initiate the setup process; a few popups may be presented to you. Agree to the ones pertaining to the MySQL installer. 
+Step 6: Once you reach the License Agreement it is recommended to read the terms and if you agree, click the acceptance checkbox preceded by the next arrow. 
+Step 7: On the next page you will be presented with a list of setup types, it is recommended to use "Developer Default".
+Step 8: When on the "Check Requirements" page you may get a confirmation asking to continue, click yes, we do not use the programs that this will cause you to exclude, click execute.
+Step 9: Continue on by clicking next until "Type and Networking" are reached and make sure "Standalone MySQL Server" is selected.
+Step 10: The next "Type and Networking" will let you change server configuration type
+Set "Config Type" to the development machine, and "TCP/IP" Port Number to 3306.
+Step 11: Next in "Accounts and Roles" assign a root password then click "Add User" add a username of your choosing, leave the rest as default and choose a password to assign to that user.
+Step 12: Continue through the rest of the pages leaving all as default settings, then when you approach the "Apply Configuration" page click execute.
+Step 13: Again, continue through the pages until you reach "Connect to Server" click "check" on this page to assure the credentials are correct and working.   
+Step 14: On the "Apply Configuration" page click execute, once finished click next.
+Step 15: To finish the installation of MySQL on the installation complete page click “finish”.
+Step 16: Now to install the "On Demand" database logging to your MySQL local instance.
+Step 17: Right click in a blank area in the schemas tab click "create schema".
+Step 18: Name the schema "On Demand" then click apply.
+Step 19: Next insert the data from the officialDB.sql into the sql tab for executing queries and run to create the required tables.
+Step 20: Insert the data from "buisnessData.sql" into the sql tab and execute it.
+Step 21: The last step to installing the "OnDemand DB" is to run the query data from
+"buisnessQueries.sql" and congratulations you have set up your database.
